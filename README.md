@@ -1,7 +1,6 @@
 # Dotfiles
 
-## THIS IS A WORK IN PROGRESS THAT I AM PUTTING OUT AS A COURTESY.  THERE IS NO ASSURANCE 
-## THAT ANY OF THIS WORKS UNTIL I SPEND MORE TIME POLISHING.
+## THIS IS A WORK IN PROGRESS
 
 For those that don't know, this is a repository of all configuration files for linux 
 packages colloquially known as "dotfiles".  I use this across my machines and decided that I would
