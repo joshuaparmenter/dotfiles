@@ -1,0 +1,268 @@
+
+
+n  <CR>         @<Plug>NetrwLocalBrowseCheck
+n  %            @<Plug>NetrwOpenFile
+n  -            @<Plug>NetrwBrowseUpDir
+n  C            @<Plug>NetrwSetChgwin
+v  D           *@:call <SNR>39_NetrwLocalRm("/home/parm/.config/nvim")<CR>
+n  D           *@:call <SNR>39_NetrwLocalRm("/home/parm/.config/nvim")<CR>
+n  I           *@:<C-U>call <SNR>39_NetrwBannerCtrl(1)<CR>
+n  O           *@:<C-U>call <SNR>39_NetrwObtain(1)<CR>
+n  P           *@:<C-U>call <SNR>39_NetrwPrevWinOpen(1)<CR>
+v  R           *@:call <SNR>39_NetrwLocalRename("/home/parm/.config/nvim")<CR>
+n  R           *@:call <SNR>39_NetrwLocalRename("/home/parm/.config/nvim")<CR>
+n  S           *@:<C-U>call <SNR>39_NetSortSequence(1)<CR>
+n  Th          *@:<C-U>call <SNR>39_NetrwSetTgt(1,'h',v:count)<CR>
+n  Tb          *@:<C-U>call <SNR>39_NetrwSetTgt(1,'b',v:count1)<CR>
+n  U           *@:<C-U>call <SNR>39_NetrwBookHistHandler(5,expand("%"))<CR>
+n  X           *@:<C-U>call <SNR>39_NetrwLocalExecute(expand("<cword>"))"<CR>
+n  a            @<Plug>NetrwHide_a
+n  cd           @<Plug>NetrwLcd
+n  cB           @<Plug>NetrwBadd_cB
+n  cb           @<Plug>NetrwBadd_cb
+n  d           *@:call <SNR>39_NetrwMakeDir("")<CR>
+n  gp          *@:<C-U>call <SNR>39_NetrwChgPerm(1,b:netrw_curdir)<CR>
+n  gn          *@:<C-U>call netrw#SetTreetop(0,<SNR>39_NetrwGetWord())<CR>
+n  gh          *@:<C-U>call <SNR>39_NetrwHidden(1)<CR>
+n  gf          *@:<C-U>call <SNR>39_NetrwForceFile(1,<SNR>39_NetrwGetWord())<CR>
+n  gd          *@:<C-U>call <SNR>39_NetrwForceChgDir(1,<SNR>39_NetrwGetWord())<CR>
+n  gb           @<Plug>NetrwBookHistHandler_gb
+n  i           *@:<C-U>call <SNR>39_NetrwListStyle(1)<CR>
+n  mz          *@:<C-U>call <SNR>39_NetrwMarkFileCompress(1)<CR>
+n  mX          *@:<C-U>call <SNR>39_NetrwMarkFileExe(1,1)<CR>
+n  mx          *@:<C-U>call <SNR>39_NetrwMarkFileExe(1,0)<CR>
+n  mv          *@:<C-U>call <SNR>39_NetrwMarkFileVimCmd(1)<CR>
+n  mu          *@:<C-U>call <SNR>39_NetrwUnMarkFile(1)<CR>
+n  mt          *@:<C-U>call <SNR>39_NetrwMarkFileTgt(1)<CR>
+n  mT          *@:<C-U>call <SNR>39_NetrwMarkFileTag(1)<CR>
+n  ms          *@:<C-U>call <SNR>39_NetrwMarkFileSource(1)<CR>
+n  mr          *@:<C-U>call <SNR>39_NetrwMarkFileRegexp(1)<CR>
+n  mm          *@:<C-U>call <SNR>39_NetrwMarkFileMove(1)<CR>
+n  mh          *@:<C-U>call <SNR>39_NetrwMarkHideSfx(1)<CR>
+n  mg          *@:<C-U>call <SNR>39_NetrwMarkFileGrep(1)<CR>
+n  mF          *@:<C-U>call <SNR>39_NetrwUnmarkList(bufnr("%"),b:netrw_curdir)<CR>
+n  mf          *@:<C-U>call <SNR>39_NetrwMarkFile(1,<SNR>39_NetrwGetWord())<CR>
+n  me          *@:<C-U>call <SNR>39_NetrwMarkFileEdit(1)<CR>
+n  md          *@:<C-U>call <SNR>39_NetrwMarkFileDiff(1)<CR>
+n  mc          *@:<C-U>call <SNR>39_NetrwMarkFileCopy(1)<CR>
+n  mB          *@:<C-U>call <SNR>39_NetrwBookHistHandler(6,b:netrw_curdir)<CR>
+n  mb          *@:<C-U>call <SNR>39_NetrwBookHistHandler(0,b:netrw_curdir)<CR>
+n  mA          *@:<C-U>call <SNR>39_NetrwMarkFileArgList(1,1)<CR>
+n  ma          *@:<C-U>call <SNR>39_NetrwMarkFileArgList(1,0)<CR>
+n  o           *@:call <SNR>39_NetrwSplit(3)<CR>
+n  p           *@:<C-U>call <SNR>39_NetrwPreview(<SNR>39_NetrwBrowseChgDir(1,<SNR>39_NetrwGetWord(),1,1))<CR>
+n  qL          *@:<C-U>call <SNR>39_NetrwMarkFileQFEL(1,getloclist(v:count))<CR>
+n  qF          *@:<C-U>call <SNR>39_NetrwMarkFileQFEL(1,getqflist())<CR>
+n  qf          *@:<C-U>call <SNR>39_NetrwFileInfo(1,<SNR>39_NetrwGetWord())<CR>
+n  qb          *@:<C-U>call <SNR>39_NetrwBookHistHandler(2,b:netrw_curdir)<CR>
+n  r           *@:<C-U>let g:netrw_sort_direction= (g:netrw_sort_direction =~# 'n')? 'r' : 'n'|exe "norm! 0"|call <SNR>39_NetrwRefresh(1,<SNR>39_NetrwBrowseChgDir(1,'./',0))<CR>
+n  s           *@:call <SNR>39_NetrwSortStyle(1)<CR>
+n  t           *@:call <SNR>39_NetrwSplit(4)<CR>
+n  u           *@:<C-U>call <SNR>39_NetrwBookHistHandler(4,expand("%"))<CR>
+n  v           *@:call <SNR>39_NetrwSplit(5)<CR>
+n  x           *@:<C-U>call netrw#BrowseX(<SNR>39_NetrwBrowseChgDir(1,<SNR>39_NetrwGetWord(),1,0),0)"<CR>
+n  <F1>        *@:he netrw-quickhelp<CR>
+v  <Del>       *@:call <SNR>39_NetrwLocalRm("/home/parm/.config/nvim")<CR>
+n  <Del>       *@:call <SNR>39_NetrwLocalRm("/home/parm/.config/nvim")<CR>
+v  <RightMouse> *@:exec "norm! \<leftmouse>"|call <SNR>39_NetrwLocalRm("/home/parm/.config/nvim")<CR>
+n  <RightMouse> *@:exec "norm! \<leftmouse>"|call <SNR>39_NetrwLocalRm("/home/parm/.config/nvim")<CR>
+n  <Plug>Netrw2Leftmouse  @-
+n  <Plug>NetrwSLeftdrag *@:exec "norm! \<leftmouse>"|call <SNR>39_NetrwSLeftdrag(1)<CR>
+n  <Plug>NetrwSLeftmouse *@:exec "norm! \<leftmouse>"|call <SNR>39_NetrwSLeftmouse(1)<CR>
+n  <Plug>NetrwMiddlemouse *@:exec "norm! \<leftmouse>"|call <SNR>39_NetrwPrevWinOpen(1)<CR>
+n  <Plug>NetrwCLeftmouse *@:exec "norm! \<leftmouse>"|call <SNR>39_NetrwCLeftmouse(1)<CR>
+n  <Plug>NetrwLeftmouse *@:exec "norm! \<leftmouse>"|call <SNR>39_NetrwLeftmouse(1)<CR>
+n  <2-LeftMouse>  @<Plug>Netrw2Leftmouse
+n  <S-LeftDrag>  @<Plug>NetrwSLeftdrag
+n  <S-LeftMouse>  @<Plug>NetrwSLeftmouse
+n  <MiddleMouse>  @<Plug>NetrwMiddlemouse
+n  <C-LeftMouse>  @<Plug>NetrwCLeftmouse
+n  <LeftMouse>  @<Plug>NetrwLeftmouse
+n  <Plug>NetrwTreeSqueeze *@:call <SNR>39_TreeSqueezeDir(1)<CR>
+n  <S-CR>       @<Plug>NetrwTreeSqueeze
+n  <S-Up>      *@:Pexplore<CR>
+n  <S-Down>    *@:Nexplore<CR>
+n  <Plug>NetrwRefresh *@<C-L>:call <SNR>39_NetrwRefresh(1,<SNR>39_NetrwBrowseChgDir(1,(exists("w:netrw_liststyle") && exists("w:netrw_treetop") && w:netrw_liststyle == 3)? w:netrw_treetop : './',0))<CR>
+n  <Plug>NetrwHideEdit *@:call <SNR>39_NetrwHideEdit(1)<CR>
+n  <C-H>        @<Plug>NetrwHideEdit
+n  <Plug>NetrwBookHistHandler_gb *@:<C-U>call <SNR>39_NetrwBookHistHandler(1,b:netrw_curdir)<CR>
+n  <Plug>NetrwMakeDir *@:<C-U>call <SNR>39_NetrwMakeDir("")<CR>
+n  <Plug>NetrwServerEdit *@:<C-U>call <SNR>39_NetrwServerEdit(3,<SNR>39_NetrwGetWord())<CR>
+n  <Plug>NetrwLocalBrowseCheck *@:<C-U>call netrw#LocalBrowseCheck(<SNR>39_NetrwBrowseChgDir(1,<SNR>39_NetrwGetWord(),1))<CR>
+n  <Plug>NetrwSetChgwin *@:<C-U>call <SNR>39_NetrwSetChgwin()<CR>
+n  <Plug>NetrwLcd *@:<C-U>call <SNR>39_NetrwLcd(b:netrw_curdir)<CR>
+n  <Plug>NetrwBadd_cB *@:<C-U>call <SNR>39_NetrwBadd(1,1)<CR>
+n  <Plug>NetrwBadd_cb *@:<C-U>call <SNR>39_NetrwBadd(1,0)<CR>
+n  <Plug>NetrwOpenFile *@:<C-U>call <SNR>39_NetrwOpenFile(1)<CR>
+n  <Plug>NetrwBrowseUpDir *@:<C-U>call <SNR>39_NetrwBrowseUpDir(1)<CR>
+n  <Plug>NetrwHide_a *@:<C-U>call <SNR>39_NetrwHide(1)<CR>
+n  <C-R>        @<Plug>NetrwServerEdit
+n  <C-L>        @<Plug>NetrwRefresh
+s  <Tab>       * <Lua 286: ~/.local/share/nvim/lazy/nvim-cmp/lua/cmp/utils/keymap.lua:133>
+                 cmp.utils.keymap.set_map
+n  <Space>.    * <Lua 194: ~/.config/nvim/lua/plugins/harpoon.lua:36>
+n  <Space>,    * <Lua 193: ~/.config/nvim/lua/plugins/harpoon.lua:35>
+n  <Space>4    * <Lua 186: ~/.config/nvim/lua/plugins/harpoon.lua:34>
+n  <Space>3    * <Lua 185: ~/.config/nvim/lua/plugins/harpoon.lua:33>
+n  <Space>2    * <Lua 183: ~/.config/nvim/lua/plugins/harpoon.lua:32>
+n  <Space>1    * <Lua 182: ~/.config/nvim/lua/plugins/harpoon.lua:31>
+n  <Space>a    * <Lua 168: ~/.config/nvim/lua/plugins/harpoon.lua:28>
+n  <Space>fh   * <Lua 166: ~/.config/nvim/lua/plugins/harpoon.lua:27>
+n  <Space>fp   * <Lua 159: ~/.local/share/nvim/lazy/telescope.nvim/lua/telescope/builtin/init.lua:501>
+n  <Space>fg   * <Lua 158: ~/.local/share/nvim/lazy/telescope.nvim/lua/telescope/builtin/init.lua:501>
+n  <Space>ff   * <Lua 149: ~/.local/share/nvim/lazy/telescope.nvim/lua/telescope/builtin/init.lua:501>
+n  <Space><Space> * :Ex<CR>
+x  #           * <Lua 8: vim/_defaults.lua:0>
+                 :help v_#-default
+o  %             <Plug>(MatchitOperationForward)
+x  %             <Plug>(MatchitVisualForward)
+n  %             <Plug>(MatchitNormalForward)
+n  &           * :&&<CR>
+                 :help &-default
+x  *           * <Lua 3: vim/_defaults.lua:0>
+                 :help v_star-default
+x  @           * mode() ==# 'V' ? ':normal! @'.getcharstr().'<CR>' : '@'
+                 :help v_@-default
+x  Q           * mode() ==# 'V' ? ':normal! @<C-R>=reg_recorded()<CR><CR>' : 'Q'
+                 :help v_Q-default
+n  Y           * y$
+                 :help Y-default
+o  [%            <Plug>(MatchitOperationMultiBackward)
+x  [%            <Plug>(MatchitVisualMultiBackward)
+n  [%            <Plug>(MatchitNormalMultiBackward)
+n  [<Space>    * <Lua 58: vim/_defaults.lua:0>
+                 Add empty line above cursor
+n  [B          * <Lua 56: vim/_defaults.lua:0>
+                 :brewind
+n  [b          * <Lua 54: vim/_defaults.lua:0>
+                 :bprevious
+n  [<C-T>      * <Lua 52: vim/_defaults.lua:0>
+                  :ptprevious
+n  [T          * <Lua 50: vim/_defaults.lua:0>
+                 :trewind
+n  [t          * <Lua 48: vim/_defaults.lua:0>
+                 :tprevious
+n  [A          * <Lua 46: vim/_defaults.lua:0>
+                 :rewind
+n  [a          * <Lua 44: vim/_defaults.lua:0>
+                 :previous
+n  [<C-L>      * <Lua 42: vim/_defaults.lua:0>
+                 :lpfile
+n  [L          * <Lua 40: vim/_defaults.lua:0>
+                 :lrewind
+n  [l          * <Lua 38: vim/_defaults.lua:0>
+                 :lprevious
+n  [<C-Q>      * <Lua 36: vim/_defaults.lua:0>
+                 :cpfile
+n  [Q          * <Lua 34: vim/_defaults.lua:0>
+                 :crewind
+n  [q          * <Lua 32: vim/_defaults.lua:0>
+                 :cprevious
+n  [D          * <Lua 30: vim/_defaults.lua:0>
+                 Jump to the first diagnostic in the current buffer
+n  [d          * <Lua 28: vim/_defaults.lua:0>
+                 Jump to the previous diagnostic in the current buffer
+o  ]%            <Plug>(MatchitOperationMultiForward)
+x  ]%            <Plug>(MatchitVisualMultiForward)
+n  ]%            <Plug>(MatchitNormalMultiForward)
+n  ]<Space>    * <Lua 59: vim/_defaults.lua:0>
+                 Add empty line below cursor
+n  ]B          * <Lua 57: vim/_defaults.lua:0>
+                 :blast
+n  ]b          * <Lua 55: vim/_defaults.lua:0>
+                 :bnext
+n  ]<C-T>      * <Lua 53: vim/_defaults.lua:0>
+                 :ptnext
+n  ]T          * <Lua 51: vim/_defaults.lua:0>
+                 :tlast
+n  ]t          * <Lua 49: vim/_defaults.lua:0>
+                 :tnext
+n  ]A          * <Lua 47: vim/_defaults.lua:0>
+                 :last
+n  ]a          * <Lua 45: vim/_defaults.lua:0>
+                 :next
+n  ]<C-L>      * <Lua 43: vim/_defaults.lua:0>
+                 :lnfile
+n  ]L          * <Lua 41: vim/_defaults.lua:0>
+                 :llast
+n  ]l          * <Lua 39: vim/_defaults.lua:0>
+                 :lnext
+n  ]<C-Q>      * <Lua 37: vim/_defaults.lua:0>
+                 :cnfile
+n  ]Q          * <Lua 35: vim/_defaults.lua:0>
+                 :clast
+n  ]q          * <Lua 33: vim/_defaults.lua:0>
+                 :cnext
+n  ]D          * <Lua 29: vim/_defaults.lua:0>
+                 Jump to the last diagnostic in the current buffer
+n  ]d          * <Lua 27: vim/_defaults.lua:0>
+                 Jump to the next diagnostic in the current buffer
+x  a%            <Plug>(MatchitVisualTextObject)
+o  g%            <Plug>(MatchitOperationBackward)
+x  g%            <Plug>(MatchitVisualBackward)
+n  g%            <Plug>(MatchitNormalBackward)
+n  gO          * <Lua 20: vim/_defaults.lua:0>
+                 vim.lsp.buf.document_symbol()
+n  gri         * <Lua 19: vim/_defaults.lua:0>
+                 vim.lsp.buf.implementation()
+n  grr         * <Lua 18: vim/_defaults.lua:0>
+                 vim.lsp.buf.references()
+x  gra         * <Lua 17: vim/_defaults.lua:0>
+                 vim.lsp.buf.code_action()
+n  gra         * <Lua 16: vim/_defaults.lua:0>
+                 vim.lsp.buf.code_action()
+n  grn         * <Lua 15: vim/_defaults.lua:0>
+                 vim.lsp.buf.rename()
+o  gc          * <Lua 14: vim/_defaults.lua:0>
+                 Comment textobject
+n  gcc         * <Lua 13: vim/_defaults.lua:0>
+                 Toggle comment line
+x  gc          * <Lua 12: vim/_defaults.lua:0>
+                 Toggle comment
+n  gc          * <Lua 11: vim/_defaults.lua:0>
+                 Toggle comment
+x  gx          * <Lua 10: vim/_defaults.lua:0>
+                 Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)
+n  gx          * <Lua 9: vim/_defaults.lua:0>
+                 Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)
+x  <Plug>(MatchitVisualTextObject)   <Plug>(MatchitVisualMultiBackward)o<Plug>(MatchitVisualMultiForward)
+o  <Plug>(MatchitOperationMultiForward) * :<C-U>call matchit#MultiMatch("W",  "o")<CR>
+o  <Plug>(MatchitOperationMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "o")<CR>
+x  <Plug>(MatchitVisualMultiForward) * :<C-U>call matchit#MultiMatch("W",  "n")<CR>m'gv``
+x  <Plug>(MatchitVisualMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "n")<CR>m'gv``
+n  <Plug>(MatchitNormalMultiForward) * :<C-U>call matchit#MultiMatch("W",  "n")<CR>
+n  <Plug>(MatchitNormalMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "n")<CR>
+o  <Plug>(MatchitOperationBackward) * :<C-U>call matchit#Match_wrapper('',0,'o')<CR>
+o  <Plug>(MatchitOperationForward) * :<C-U>call matchit#Match_wrapper('',1,'o')<CR>
+x  <Plug>(MatchitVisualBackward) * :<C-U>call matchit#Match_wrapper('',0,'v')<CR>m'gv``
+x  <Plug>(MatchitVisualForward) * :<C-U>call matchit#Match_wrapper('',1,'v')<CR>:if col("''") != col("$") | exe ":normal! m'" | endif<CR>gv``
+n  <Plug>(MatchitNormalBackward) * :<C-U>call matchit#Match_wrapper('',0,'n')<CR>
+n  <Plug>(MatchitNormalForward) * :<C-U>call matchit#Match_wrapper('',1,'n')<CR>
+n  <C-`>       * <Lua 169: ~/.config/nvim/lua/plugins/harpoon.lua:29>
+n  <Plug>PlenaryTestFile * :lua require('plenary.test_harness').test_file(vim.fn.expand("%:p"))<CR>
+s  <Plug>luasnip-jump-prev * <Lua 134: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:57>
+                 LuaSnip: Jump to the previous node
+s  <Plug>luasnip-jump-next * <Lua 133: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:54>
+                 LuaSnip: Jump to the next node
+s  <Plug>luasnip-prev-choice * <Lua 132: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:51>
+                 LuaSnip: Change to the previous choice from the choiceNode
+s  <Plug>luasnip-next-choice * <Lua 131: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:48>
+                 LuaSnip: Change to the next choice from the choiceNode
+s  <Plug>luasnip-expand-snippet * <Lua 130: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:45>
+                 LuaSnip: Expand the current snippet
+s  <Plug>luasnip-expand-or-jump * <Lua 129: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:42>
+                 LuaSnip: Expand or jump in the current snippet
+   <Plug>luasnip-expand-repeat * <Lua 127: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:35>
+                 LuaSnip: Repeat last node expansion
+n  <Plug>luasnip-delete-check * <Lua 125: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:28>
+                 LuaSnip: Removes current snippet from jumplist
+n  <C-W><C-D>    <C-W>d
+                 Show diagnostics under the cursor
+n  <C-W>d      * <Lua 31: vim/_defaults.lua:0>
+                 Show diagnostics under the cursor
+s  <S-Tab>     * <Lua 223: ~/.local/share/nvim/lazy/nvim-cmp/lua/cmp/utils/keymap.lua:133>
+                 cmp.utils.keymap.set_map
+s  <C-S>       * <Lua 22: vim/_defaults.lua:0>
+                 vim.lsp.buf.signature_help()
+n  <C-L>       * <Cmd>nohlsearch|diffupdate|normal! <C-L><CR>
+                 :help CTRL-L-default

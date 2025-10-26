@@ -1,23 +1,14 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
+vim.opt.termguicolors = true
 
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevelstart = 99  -- Popular choice: top-level open, nested closed
+--vim.opt.foldlevel = 99
+--vim.opt.foldcolumn = "0"      -- Most people disable the fold column
+--vim.opt.foldtext = ""         -- Empty foldtext for syntax highlighting (Neovim 0.10+)
 
-local opts = {}
+require("config.lazy")           -- This should contain lazy.setup("plugins")
+require("lsp")
 
-require("vim-options")
-require("lazy").setup("plugins")
-
-
- 
-
+vim.cmd.colorscheme("catppuccin")
 
